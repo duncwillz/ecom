@@ -143,6 +143,7 @@ class _AddUserDetailScreenState extends State<AddUserDetailScreen> {
     if (_formKey.currentState.validate()) {
       addAddressCubit.saveData(nameEditingController.text,
           isEdit: widget.newAddress);
+      Navigator.of(context).pushReplacementNamed(Router.mainHomeScreen);
     }
   }
 }
